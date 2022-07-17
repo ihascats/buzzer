@@ -8,6 +8,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+body > div {
+  display: grid;
+  justify-content: center;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

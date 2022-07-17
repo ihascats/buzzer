@@ -1,0 +1,63 @@
+.leftSideBar {
+  background-color: yellowgreen;
+  display: grid;
+  justify-items: end;
+}
+
+.leftSideBar > div {
+  height: fit-content;
+  width: 65%;
+}
+
+.lsbTop {
+  display: grid;
+  row-gap: 16px;
+  justify-items: start;
+}
+.lsbBottom {
+  background-color: rgba(70, 105, 93, 0.329);
+}
+
+.navigation {
+  display: grid;
+  justify-items: start;
+  row-gap: 16px;
+}
+
+.navigation > button {
+  overflow-wrap: break-word;
+  font-size: 20px;
+  border: none;
+  padding: 12px 24px 12px 12px;
+  border-radius: 24px;
+  display: grid;
+  align-items: center;
+  grid-template-columns: max-content max-content;
+  column-gap: 16px;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.navigation > button:hover,
+.logo:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.navigation > button > svg {
+  width: 21px;
+}
+
+.logo {
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.buzz {
+  overflow-wrap: break-word;
+  font-size: 20px;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 24px;
+  background-color: rgb(255, 217, 0);
+  width: 80%;
+}
