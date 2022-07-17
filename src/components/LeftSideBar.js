@@ -22,7 +22,16 @@ export default function LeftSideBar() {
       </div>
 
       <div className="lsbBottom">
-        <div className="logout"></div>
+        <div className="logout">
+          <div className="userPfp">
+            <img src="" alt="" />
+          </div>
+          <div>
+            <div className="username"></div>
+            <div className="userAt"></div>
+          </div>
+          <div></div>
+        </div>
       </div>
     </div>
   );
