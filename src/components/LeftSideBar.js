@@ -22,16 +22,20 @@ export default function LeftSideBar() {
       </div>
 
       <div className="lsbBottom">
-        <div className="logout">
+        <button className="logout">
           <div className="userPfp">
-            <img src="" alt="" />
+            <img
+              src="https://pbs.twimg.com/profile_images/1548229654598651904/BckO7e-N_400x400.jpg"
+              alt=""
+            />
           </div>
-          <div>
-            <div className="username"></div>
-            <div className="userAt"></div>
+
+          <div className="user">
+            <div className="username">Soli</div>
+            <div className="userAt">@ihas_cats</div>
           </div>
-          <div></div>
-        </div>
+          <div className="dots">{iconPack.threeDots}</div>
+        </button>
       </div>
     </div>
   );

@@ -5,6 +5,7 @@ import {
   mdiBee,
   mdiBellOutline,
   mdiBookmarkOutline,
+  mdiDotsHorizontal,
   mdiDotsHorizontalCircleOutline,
   mdiEmailOutline,
   mdiPound,
@@ -14,7 +15,7 @@ export default function Icons() {
   const hashtag = (
     <Icon
       path={mdiPound}
-      title="User Profile"
+      title=""
       size={1}
       horizontal
       vertical
@@ -25,7 +26,7 @@ export default function Icons() {
   const home = (
     <Icon
       path={mdiArchive}
-      title="User Profile"
+      title=""
       size={1}
       horizontal
       vertical
@@ -36,7 +37,7 @@ export default function Icons() {
   const bell = (
     <Icon
       path={mdiBellOutline}
-      title="User Profile"
+      title=""
       size={1}
       horizontal
       vertical
@@ -47,7 +48,7 @@ export default function Icons() {
   const mail = (
     <Icon
       path={mdiEmailOutline}
-      title="User Profile"
+      title=""
       size={1}
       horizontal
       vertical
@@ -58,7 +59,7 @@ export default function Icons() {
   const bookmark = (
     <Icon
       path={mdiBookmarkOutline}
-      title="User Profile"
+      title=""
       size={1}
       horizontal
       vertical
@@ -69,7 +70,7 @@ export default function Icons() {
   const account = (
     <Icon
       path={mdiAccountOutline}
-      title="User Profile"
+      title=""
       size={1}
       horizontal
       vertical
@@ -80,7 +81,7 @@ export default function Icons() {
   const more = (
     <Icon
       path={mdiDotsHorizontalCircleOutline}
-      title="User Profile"
+      title=""
       size={1}
       horizontal
       vertical
@@ -91,8 +92,19 @@ export default function Icons() {
   const bee = (
     <Icon
       path={mdiBee}
-      title="User Profile"
+      title=""
       size={2}
+      horizontal
+      vertical
+      rotate={180}
+      color="inherit"
+    />
+  );
+  const threeDots = (
+    <Icon
+      path={mdiDotsHorizontal}
+      title=""
+      size={1}
       horizontal
       vertical
       rotate={180}
@@ -109,6 +121,7 @@ export default function Icons() {
     account,
     more,
     bee,
+    threeDots,
   };
 
   return iconPack;

@@ -2,23 +2,19 @@
   background-color: yellowgreen;
   display: grid;
   justify-items: end;
-  padding: 0 12px;
   align-content: space-between;
 }
 
 .leftSideBar > div {
   height: fit-content;
   width: 275px;
+  padding: 0 12px;
 }
 
 .lsbTop {
   display: grid;
   row-gap: 16px;
   justify-items: start;
-}
-.lsbBottom {
-  background-color: rgba(70, 105, 93, 0.329);
-  height: 100px;
 }
 
 .navigation {
@@ -43,6 +39,7 @@
 .navigation > button:hover,
 .logo:hover,
 .logo:focus,
+.logout:hover,
 .navigation > button:focus {
   background-color: rgba(255, 255, 255, 0.2);
   outline-color: #ffbc00;
@@ -77,4 +74,41 @@
   outline-color: #0077ff;
   outline-style: dashed;
   outline-width: 4px;
+}
+
+.logout {
+  width: 100%;
+  display: grid;
+  grid-template-columns: max-content 1fr max-content;
+  padding: 12px;
+  border-radius: 32px;
+  border: none;
+  height: 64px;
+  margin: 12px 0;
+  background-color: rgba(0, 0, 0, 0);
+  column-gap: 12px;
+}
+
+.userPfp > img {
+  width: 40px;
+  border-radius: 50%;
+}
+.username {
+  font-weight: bold;
+}
+
+.username,
+.userAt {
+  font-size: 15px;
+}
+
+.user {
+  display: grid;
+  justify-items: start;
+}
+
+.dots {
+  height: 100%;
+  display: grid;
+  align-items: center;
 }
