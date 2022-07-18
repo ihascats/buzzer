@@ -1,4 +1,5 @@
 import Icons from './Icons';
+import LogoutButton from './LogoutButton';
 import './styles/LeftSideBar.css';
 export default function LeftSideBar() {
   const iconPack = Icons();
@@ -22,20 +23,13 @@ export default function LeftSideBar() {
       </div>
 
       <div className="lsbBottom">
-        <button className="logout">
-          <div className="userPfp">
-            <img
-              src="https://pbs.twimg.com/profile_images/1548229654598651904/BckO7e-N_400x400.jpg"
-              alt=""
-            />
-          </div>
-
-          <div className="user">
-            <div className="username">Soli</div>
-            <div className="userAt">@ihas_cats</div>
-          </div>
-          <div className="dots">{iconPack.threeDots}</div>
-        </button>
+        <LogoutButton
+          userImage={
+            'https://pbs.twimg.com/profile_images/1548229654598651904/BckO7e-N_400x400.jpg'
+          }
+          username={'Soli'}
+          userAt={'@ihas_cats'}
+        />
       </div>
     </div>
   );
