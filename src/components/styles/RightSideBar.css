@@ -18,7 +18,7 @@
   grid-template-columns: max-content max-content max-content;
   justify-content: center;
   align-items: center;
-  padding: 0 12px;
+  padding: 0 0 0 18px;
 }
 
 .searchBar > input {
