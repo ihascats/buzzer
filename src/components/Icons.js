@@ -8,6 +8,7 @@ import {
   mdiDotsHorizontal,
   mdiDotsHorizontalCircleOutline,
   mdiEmailOutline,
+  mdiMagnify,
   mdiPound,
 } from '@mdi/js';
 
@@ -112,6 +113,18 @@ export default function Icons() {
     />
   );
 
+  const search = (
+    <Icon
+      path={mdiMagnify}
+      title=""
+      size={1}
+      horizontal
+      vertical
+      rotate={180}
+      color="inherit"
+    />
+  );
+
   const iconPack = {
     home,
     hashtag,
@@ -122,6 +135,7 @@ export default function Icons() {
     more,
     bee,
     threeDots,
+    search,
   };
 
   return iconPack;

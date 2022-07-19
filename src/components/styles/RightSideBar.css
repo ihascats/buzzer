@@ -1,3 +1,39 @@
 .rightSideBar {
   background-color: wheat;
+  display: grid;
+  padding: 0 12px;
+}
+
+.rightContainer {
+  width: 400px;
+  padding: 6px 12px;
+}
+
+.searchBar {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 21px;
+  height: 42px;
+  display: grid;
+  grid-template-columns: max-content max-content max-content;
+  justify-content: center;
+  align-items: center;
+  padding: 0 12px;
+}
+
+.searchBar > input {
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  height: 100%;
+  width: 336px;
+  padding: 12px;
+  font-size: 16px;
+}
+
+.searchBar > input:focus {
+  outline: none;
+}
+
+.active {
+  outline: 1px solid rgb(0, 192, 80);
 }
