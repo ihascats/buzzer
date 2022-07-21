@@ -1,12 +1,18 @@
 .content {
   background-color: green;
   display: grid;
+  max-width: 598px;
+  min-width: 0;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr;
+  position: relative;
 }
 
 .heading {
   height: 53px;
   background-color: rgba(0, 0, 0, 0.3);
-  position: absolute;
+  position: sticky;
+  top: 0;
 }
 
 .items {
@@ -18,8 +24,4 @@
   height: 300px;
   width: 100%;
   border: 2px solid black;
-}
-
-.filler:first-child {
-  margin: 53px 0 0 0;
 }
