@@ -29,7 +29,7 @@ export default function LogoutButton({ userImage, username, userAt }) {
   }
 
   return (
-    <button onClick={popupState} className="logout">
+    <div onClick={popupState} className="logout">
       <div className="userPfp">
         <img src={userImage} alt="" />
       </div>
@@ -47,6 +47,6 @@ export default function LogoutButton({ userImage, username, userAt }) {
           left={logoutCoords.left + 'px'}
         />
       ) : null}
-    </button>
+    </div>
   );
 }

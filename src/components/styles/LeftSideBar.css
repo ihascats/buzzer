@@ -5,7 +5,7 @@
   align-content: space-between;
 }
 
-.leftSideBar > div {
+.leftSideBar > .leftContainer > div {
   height: fit-content;
   width: 275px;
   padding: 0 12px;
@@ -111,4 +111,11 @@
   height: 100%;
   display: grid;
   align-items: center;
+}
+
+.leftContainer {
+  position: fixed;
+  height: 100vh;
+  display: grid;
+  align-content: space-between;
 }

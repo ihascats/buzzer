@@ -4,4 +4,5 @@
   width: 100vw;
   display: grid;
   grid-template-columns: 0.95fr 1fr 1.2fr;
+  overflow: auto;
 }
