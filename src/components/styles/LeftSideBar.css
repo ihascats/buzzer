@@ -58,7 +58,7 @@
   height: 48px;
 }
 
-.buzz {
+.newBuzz {
   overflow-wrap: break-word;
   font-size: 20px;
   border: none;
@@ -68,8 +68,8 @@
   width: 80%;
 }
 
-.buzz:focus,
-.buzz:hover {
+.newBuzz:focus,
+.newBuzz:hover {
   background-color: rgb(226, 192, 0);
   outline-color: #0077ff;
   outline-style: dashed;

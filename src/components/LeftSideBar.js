@@ -20,7 +20,7 @@ export default function LeftSideBar() {
             <button>{iconPack.more}More</button>
           </div>
 
-          <button className="buzz">Buzz</button>
+          <button className="newBuzz">Buzz</button>
         </div>
 
         <div className="lsbBottom">
