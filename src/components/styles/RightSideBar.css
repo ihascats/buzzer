@@ -1,5 +1,4 @@
 .rightSideBar {
-  background-color: wheat;
   display: grid;
   padding: 0 12px;
 }
@@ -12,7 +11,7 @@
 
 .searchBar {
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(167, 207, 255, 0.075);
   border-radius: 21px;
   height: 42px;
   display: grid;
@@ -20,6 +19,10 @@
   justify-content: center;
   align-items: center;
   padding: 0 0 0 18px;
+}
+
+.searchBar > div {
+  fill: #8ba2b1;
 }
 
 .searchBar > input {

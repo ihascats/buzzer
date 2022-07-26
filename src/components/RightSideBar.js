@@ -15,7 +15,7 @@ export default function RightSideBar() {
     const searchBar = document.querySelector('.searchBar');
     const svg = document.querySelector('.searchBar > div > svg');
     searchBar.classList.remove('active');
-    svg.style.fill = 'black';
+    svg.style.fill = '#8ba2b1';
   }
 
   return (

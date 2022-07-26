@@ -11,7 +11,9 @@ export default function Content() {
 
   return (
     <div className="content">
-      <div className="heading"></div>
+      <div className="heading">
+        <p className="title">Home</p>
+      </div>
       <div className="items">
         {/* user, time, text, image */}
         <Buzz

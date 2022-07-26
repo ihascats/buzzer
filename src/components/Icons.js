@@ -21,7 +21,7 @@ export default function Icons() {
       horizontal
       vertical
       rotate={180}
-      color="inherit"
+      color="rgb(247, 249, 249)"
     />
   );
   const home = (
@@ -32,7 +32,7 @@ export default function Icons() {
       horizontal
       vertical
       rotate={180}
-      color="inherit"
+      color="rgb(247, 249, 249)"
     />
   );
   const bell = (
@@ -43,7 +43,7 @@ export default function Icons() {
       horizontal
       vertical
       rotate={180}
-      color="inherit"
+      color="rgb(247, 249, 249)"
     />
   );
   const mail = (
@@ -54,7 +54,7 @@ export default function Icons() {
       horizontal
       vertical
       rotate={180}
-      color="inherit"
+      color="rgb(247, 249, 249)"
     />
   );
   const bookmark = (
@@ -65,7 +65,7 @@ export default function Icons() {
       horizontal
       vertical
       rotate={180}
-      color="inherit"
+      color="rgb(247, 249, 249)"
     />
   );
   const account = (
@@ -76,7 +76,7 @@ export default function Icons() {
       horizontal
       vertical
       rotate={180}
-      color="inherit"
+      color="rgb(247, 249, 249)"
     />
   );
   const more = (
@@ -87,7 +87,7 @@ export default function Icons() {
       horizontal
       vertical
       rotate={180}
-      color="inherit"
+      color="rgb(247, 249, 249)"
     />
   );
   const bee = (
@@ -98,7 +98,7 @@ export default function Icons() {
       horizontal
       vertical
       rotate={180}
-      color="inherit"
+      color="rgb(247, 249, 249)"
     />
   );
   const threeDots = (
@@ -109,7 +109,7 @@ export default function Icons() {
       horizontal
       vertical
       rotate={180}
-      color="inherit"
+      color="rgb(247, 249, 249)"
     />
   );
 
