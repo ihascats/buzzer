@@ -16,6 +16,7 @@
   font-size: 20px;
   font-weight: 500;
   /* Background needs to blur the content behind it */
+  backdrop-filter: blur(5px);
 }
 
 .items {
