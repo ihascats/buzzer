@@ -5,10 +5,16 @@ import {
   mdiBee,
   mdiBellOutline,
   mdiBookmarkOutline,
+  mdiCalendarClockOutline,
   mdiDotsHorizontal,
   mdiDotsHorizontalCircleOutline,
   mdiEmailOutline,
+  mdiEmoticonHappyOutline,
+  mdiFileGifBox,
+  mdiImageOutline,
   mdiMagnify,
+  mdiMapMarkerOutline,
+  mdiPoll,
   mdiPound,
 } from '@mdi/js';
 
@@ -125,6 +131,78 @@ export default function Icons() {
     />
   );
 
+  const attachImage = (
+    <Icon
+      path={mdiImageOutline}
+      title=""
+      // size={1}
+      horizontal
+      vertical
+      rotate={180}
+      color="inherit"
+    />
+  );
+
+  const attachGif = (
+    <Icon
+      path={mdiFileGifBox}
+      title=""
+      // size={1}
+      horizontal
+      vertical
+      rotate={180}
+      color="inherit"
+    />
+  );
+
+  const poll = (
+    <Icon
+      path={mdiPoll}
+      title=""
+      // size={1}
+      horizontal
+      vertical
+      rotate={270}
+      color="inherit"
+    />
+  );
+
+  const attachEmoji = (
+    <Icon
+      path={mdiEmoticonHappyOutline}
+      title=""
+      // size={1}
+      horizontal
+      vertical
+      rotate={180}
+      color="inherit"
+    />
+  );
+
+  const attachSchedule = (
+    <Icon
+      path={mdiCalendarClockOutline}
+      title=""
+      // size={1}
+      horizontal
+      vertical
+      rotate={180}
+      color="inherit"
+    />
+  );
+
+  const attachLocation = (
+    <Icon
+      path={mdiMapMarkerOutline}
+      title=""
+      // size={1}
+      horizontal
+      vertical
+      rotate={180}
+      color="inherit"
+    />
+  );
+
   const iconPack = {
     home,
     hashtag,
@@ -136,6 +214,12 @@ export default function Icons() {
     bee,
     threeDots,
     search,
+    attachImage,
+    attachGif,
+    poll,
+    attachEmoji,
+    attachSchedule,
+    attachLocation,
   };
 
   return iconPack;

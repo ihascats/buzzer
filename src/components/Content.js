@@ -1,4 +1,5 @@
 import Buzz from './Buzz';
+import NewBuzz from './NewBuzz';
 import './styles/Content.css';
 
 export default function Content() {
@@ -15,6 +16,7 @@ export default function Content() {
         <p className="title">Home</p>
       </div>
       <div className="items">
+        <NewBuzz user={user} />
         {/* user, time, text, image */}
         <Buzz
           user={user}

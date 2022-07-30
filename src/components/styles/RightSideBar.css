@@ -34,6 +34,22 @@
   font-size: 16px;
 }
 
+.searchBar > input::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #8ba2b1;
+  opacity: 1; /* Firefox */
+}
+
+.searchBar > input:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #8ba2b1;
+}
+
+.searchBar > input::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #8ba2b1;
+}
+
 .searchBar > input:focus {
   outline: none;
 }
