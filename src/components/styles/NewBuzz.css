@@ -95,3 +95,8 @@
   height: 36px;
   font-weight: 500;
 }
+
+.buzzAttach > button:hover {
+  background-color: rgba(255, 208, 0, 0.1);
+  border-radius: 50%;
+}
