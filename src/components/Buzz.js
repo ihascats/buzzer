@@ -10,9 +10,12 @@ export default function Buzz({ user, time, text, image }) {
           alt={`${user.name} pfp`}
         />
       </div>
-      <div>
-        <div>
-          {user.name} @{user.at} {time}
+      <div className="postContent">
+        <div className="postInfo">
+          <p>{user.name}</p>
+          <p>
+            @{user.at} {time}
+          </p>
         </div>
         <div>{text}</div>
         {image ? <img className="contentImage" src={image} alt="" /> : null}

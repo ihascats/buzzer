@@ -27,3 +27,25 @@
   margin-top: 8px;
   outline: 1px solid rgba(76, 76, 76, 0.2);
 }
+
+.postInfo {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  gap: 4px;
+}
+
+.postInfo > p:first-child {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.postInfo > p:nth-child(2) {
+  color: #8b98a5;
+  font-size: 15px;
+}
+
+.postContent {
+  display: grid;
+  grid-template-rows: max-content max-content;
+  gap: 6px;
+}

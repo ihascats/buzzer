@@ -3,7 +3,15 @@ import './styles/NewBuzz.css';
 
 export default function NewBuzz({ user }) {
   const iconPack = Icons();
+
   window.onload = () => {
+    const buzzButton = document.querySelector(
+      '.newBuzzElement > div:nth-child(2) > div:nth-child(2) > button',
+    );
+    if (document.querySelector('textarea').value === '') {
+      buzzButton.disabled = true;
+    }
+
     // code from https://stackoverflow.com/questions/454202/creating-a-textarea-with-auto-resize
     const tx = document.getElementsByTagName('textarea');
     for (let i = 0; i < tx.length; i++) {
@@ -17,8 +25,19 @@ export default function NewBuzz({ user }) {
     function OnInput() {
       this.style.height = 'auto';
       this.style.height = this.scrollHeight - 20 + 'px';
+      if (document.querySelector('textarea').value === '') {
+        buzzButton.disabled = true;
+      } else {
+        buzzButton.disabled = false;
+      }
     }
   };
+
+  function createPost() {
+    const postText = document.querySelector('textarea').value;
+    console.log(postText);
+    // send text to the database
+  }
 
   return (
     <div className="newBuzzElement">
@@ -38,7 +57,9 @@ export default function NewBuzz({ user }) {
             <button>{iconPack.attachSchedule}</button>
             <button>{iconPack.attachLocation}</button>
           </div>
-          <button className="newBuzz">Buzz</button>
+          <button onClick={createPost} className="newBuzz">
+            Buzz
+          </button>
         </div>
       </div>
     </div>
