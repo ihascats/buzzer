@@ -130,3 +130,55 @@
   display: grid;
   align-content: space-between;
 }
+
+.leftSideBar > .overlay > div > .newBuzzElement {
+  background-color: #19242f;
+  border: none;
+  padding-bottom: 20px;
+  margin-left: -16px;
+}
+
+.leftSideBar > .overlay {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(255, 255, 255, 0.2);
+  position: absolute;
+  left: 0%;
+}
+
+.leftSideBar > .overlay > div > button > svg {
+  height: 20px;
+  width: 20px;
+}
+
+.leftSideBar > .overlay > div > button {
+  border: none;
+  background-color: transparent;
+  fill: white;
+  border-radius: 50%;
+  height: 34px;
+  width: 34px;
+  margin-left: -8px;
+  margin-top: -8px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.leftSideBar > .overlay > div > button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.leftSideBar > .overlay > div {
+  width: 598px;
+  z-index: 998;
+  background-color: #19242f;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  top: 100px;
+  border-radius: 16px;
+  padding: 16px;
+}

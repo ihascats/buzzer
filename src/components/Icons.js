@@ -16,6 +16,7 @@ import {
   mdiMapMarkerOutline,
   mdiPoll,
   mdiPound,
+  mdiWindowClose,
 } from '@mdi/js';
 
 export default function Icons() {
@@ -203,6 +204,18 @@ export default function Icons() {
     />
   );
 
+  const close = (
+    <Icon
+      path={mdiWindowClose}
+      title=""
+      // size={1}
+      horizontal
+      vertical
+      rotate={180}
+      color="inherit"
+    />
+  );
+
   const iconPack = {
     home,
     hashtag,
@@ -220,6 +233,7 @@ export default function Icons() {
     attachEmoji,
     attachSchedule,
     attachLocation,
+    close,
   };
 
   return iconPack;
