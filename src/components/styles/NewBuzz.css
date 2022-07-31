@@ -1,7 +1,7 @@
 .newBuzzElement {
   padding: 4px 16px 8px;
   border-bottom: 1px solid rgba(148, 167, 197, 0.3);
-  height: 120px;
+  height: fit-content;
   width: 598px;
   display: grid;
   grid-template-columns: max-content max-content;
