@@ -34,6 +34,13 @@ export default function LeftSideBar({ loggedIn, logStatus }) {
     </div>
   );
 
+  window.onload = () => {
+    if (loggedIn === false) {
+      if (document.querySelector('.newBuzz'))
+        document.querySelector('.newBuzz').disabled = true;
+    }
+  };
+
   return (
     <div className="leftSideBar">
       <div className="leftContainer">

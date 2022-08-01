@@ -3,14 +3,15 @@ import Buzz from './Buzz';
 import NewBuzz from './NewBuzz';
 import './styles/Content.css';
 
-export default function Content() {
+export default function Content({ loggedIn }) {
   return (
     <div className="content">
       <div className="heading">
         <p className="title">Home</p>
       </div>
       <div className="items">
-        <NewBuzz />
+        {loggedIn ? <NewBuzz /> : null}
+
         {/* user, time, text, image */}
       </div>
     </div>

@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="wrapper">
       <LeftSideBar loggedIn={loggedIn} logStatus={logStatus} />
-      <Content loggedIn={loggedIn} logStatus={logStatus} />
+      <Content loggedIn={loggedIn} />
       <RightSideBar />
     </div>
   );
