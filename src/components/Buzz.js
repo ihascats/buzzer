@@ -1,23 +1,49 @@
 import './styles/Buzz.css';
 
-export default function Buzz({ user, time, text, image }) {
+export default function Buzz({ user, profilePicture, time, text, image }) {
+  let postTime = new Date().toLocaleString();
+  if (time) {
+    postTime = new Date(time.seconds * 1000).toLocaleString();
+  }
+
+  const textElement = () => {
+    const newText = text.trim().replaceAll('_nl_', '\n').split(' ');
+
+    const element = (
+      <p>
+        {newText.map((word) => {
+          if (word.slice(0, 8) === 'https://') {
+            return <a key="link" href={word}>{`${word} `}</a>;
+          }
+          return `${word} `;
+        })}
+      </p>
+    );
+    return element;
+  };
+
+  let child;
+  if (text) {
+    child = textElement();
+  }
+
   return (
     <div className="buzz">
       <div>
         <img
           className="profilePicture"
-          src={user.profilePicture}
-          alt={`${user.name} pfp`}
+          src={profilePicture}
+          alt={`${user} pfp`}
         />
       </div>
       <div className="postContent">
         <div className="postInfo">
-          <p>{user.name}</p>
+          <p>{user}</p>
           <p>
-            @{user.at} {time}
+            @{user} {postTime}
           </p>
         </div>
-        <div>{text}</div>
+        {child}
         {image ? <img className="contentImage" src={image} alt="" /> : null}
       </div>
     </div>

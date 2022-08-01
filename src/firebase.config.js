@@ -29,7 +29,7 @@ export const signInWithGoogle = async () => {
 
 export const database = getFirestore(app);
 
-const postCollection = collection(database, 'posts');
+export const postCollection = collection(database, 'posts');
 
 class CurrentUser {
   constructor() {
