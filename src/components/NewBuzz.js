@@ -1,6 +1,6 @@
 import Icons from './Icons';
 import './styles/NewBuzz.css';
-import { user } from '../firebase.config';
+import { user, sendPost } from '../firebase.config';
 
 export default function NewBuzz() {
   const iconPack = Icons();
@@ -34,10 +34,13 @@ export default function NewBuzz() {
     }
   };
 
-  function createPost() {
-    const postText = document.querySelector('textarea').value;
-    console.log(postText);
-    // send text to the database
+  function createPost(event) {
+    const postTextArea = document.querySelector('textarea');
+    if (postTextArea.value !== '') {
+      event.preventDefault();
+      sendPost(postTextArea.value.replace('\n', '_nl_ '));
+      postTextArea.value = '';
+    }
   }
 
   return (

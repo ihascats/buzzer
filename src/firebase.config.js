@@ -29,7 +29,7 @@ export const signInWithGoogle = async () => {
 
 export const database = getFirestore(app);
 
-const messagesCollection = collection(database, 'messages');
+const postCollection = collection(database, 'posts');
 
 class CurrentUser {
   constructor() {
@@ -47,15 +47,15 @@ class CurrentUser {
 
 export const user = new CurrentUser();
 
-export const sendMessage = async (text) => {
+export const sendPost = async (text) => {
   try {
-    await addDoc(messagesCollection, {
+    await addDoc(postCollection, {
       name: user.name,
       text: text,
       profilePicUrl: user.picture,
       timestamp: serverTimestamp(),
     });
   } catch (error) {
-    console.error('Error writing new message to Firebase Database', error);
+    console.error('Error writing new post to Firebase Database', error);
   }
 };
