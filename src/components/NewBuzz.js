@@ -1,7 +1,8 @@
 import Icons from './Icons';
 import './styles/NewBuzz.css';
+import { user } from '../firebase.config';
 
-export default function NewBuzz({ user }) {
+export default function NewBuzz() {
   const iconPack = Icons();
 
   window.onload = () => {
@@ -42,7 +43,7 @@ export default function NewBuzz({ user }) {
   return (
     <div className="newBuzzElement">
       <div>
-        <img src={user.profilePicture} alt="" />
+        <img src={user.picture} alt="" />
       </div>
       <div>
         <div>
