@@ -36,7 +36,7 @@ export default function LogoutButton({ userImage, username, userAt }) {
 
       <div className="user">
         <div className="username">{username}</div>
-        <div className="userAt">{userAt}</div>
+        <div className="userAt">{userAt.replace(' ', '_')}</div>
       </div>
       <div className="dots">{iconPack.threeDots}</div>
       {popup ? (

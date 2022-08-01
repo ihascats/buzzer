@@ -3,16 +3,25 @@ import Icons from './Icons';
 import LogoutButton from './LogoutButton';
 import NewBuzz from './NewBuzz';
 import './styles/LeftSideBar.css';
+import { user } from '../firebase.config';
+import SignIn from './SignIn';
+
 export default function LeftSideBar() {
   const iconPack = Icons();
   const [createNewBuzz, setCreateNewBuzz] = useState(false);
+  const [logIn, setLogIn] = useState(false);
 
-  const user = {
-    profilePicture:
-      'https://pbs.twimg.com/profile_images/1548229654598651904/BckO7e-N_400x400.jpg',
-    name: 'Soli',
-    at: 'ihas_cats',
-  };
+  // const user = {
+  //   profilePicture:
+  //     'https://pbs.twimg.com/profile_images/1548229654598651904/BckO7e-N_400x400.jpg',
+  //   name: 'Soli',
+  //   at: 'ihas_cats',
+  // };
+
+  function logInStatus() {
+    const status = !logIn;
+    setLogIn(status);
+  }
 
   function overlayStatusTrue() {
     setCreateNewBuzz(true);
@@ -60,13 +69,15 @@ export default function LeftSideBar() {
         </div>
 
         <div className="lsbBottom">
-          <LogoutButton
-            userImage={
-              'https://pbs.twimg.com/profile_images/1548229654598651904/BckO7e-N_400x400.jpg'
-            }
-            username={'Soli'}
-            userAt={'@ihas_cats'}
-          />
+          {logIn ? (
+            <LogoutButton
+              userImage={user.picture}
+              username={user.name}
+              userAt={`@${user.name}`}
+            />
+          ) : (
+            <SignIn logIn={logInStatus} />
+          )}
         </div>
       </div>
       {createNewBuzz ? newBuzzOverlay : null}
