@@ -34,15 +34,11 @@ const messagesCollection = collection(database, 'messages');
 class CurrentUser {
   constructor() {
     this.name = undefined;
-    this.email = undefined;
     this.picture = undefined;
   }
 
   setName(name) {
     this.name = name;
-  }
-  setEmail(email) {
-    this.email = email;
   }
   setPicture(picture) {
     this.picture = picture;

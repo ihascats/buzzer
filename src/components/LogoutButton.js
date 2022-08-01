@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Icons from './Icons';
 import Popup from './Popup';
 
-export default function LogoutButton({ userImage, username, userAt }) {
+export default function LogoutButton({ userImage, username, userAt, logOut }) {
   const iconPack = Icons();
   const [popup, setPopup] = useState(false);
   const [resize, setResize] = useState(false);
@@ -45,6 +45,7 @@ export default function LogoutButton({ userImage, username, userAt }) {
           right={logoutCoords.right + 'px'}
           bottom={logoutCoords.bottom + 'px'}
           left={logoutCoords.left + 'px'}
+          logOut={logOut}
         />
       ) : null}
     </div>

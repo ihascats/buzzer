@@ -5,10 +5,8 @@ export default function SignIn({ logIn }) {
   const processInformation = async (userInfo) => {
     const info = await userInfo;
     const name = info.user.displayName;
-    const email = info.user.email;
     const userPicture = info.user.photoURL;
     user.setName(name);
-    user.setEmail(email);
     user.setPicture(userPicture);
     logIn();
   };

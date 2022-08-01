@@ -74,6 +74,7 @@ export default function LeftSideBar() {
               userImage={user.picture}
               username={user.name}
               userAt={`@${user.name}`}
+              logOut={logInStatus}
             />
           ) : (
             <SignIn logIn={logInStatus} />
