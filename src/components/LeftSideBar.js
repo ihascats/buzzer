@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Icons from './Icons';
 import LogoutButton from './LogoutButton';
 import NewBuzz from './NewBuzz';
@@ -34,12 +34,14 @@ export default function LeftSideBar({ loggedIn, logStatus }) {
     </div>
   );
 
-  window.onload = () => {
+  useEffect(() => {
     if (loggedIn === false) {
       if (document.querySelector('.newBuzz'))
         document.querySelector('.newBuzz').disabled = true;
+    } else {
+      document.querySelector('.newBuzz').disabled = false;
     }
-  };
+  });
 
   return (
     <div className="leftSideBar">
