@@ -8,15 +8,37 @@ import './styles/Content.css';
 
 export default function Content({ loggedIn }) {
   const [posts, setPosts] = useState();
+  const [newPosts, setNewPosts] = useState(0);
 
-  useEffect(() => {
-    const recentPosts = query(postCollection, orderBy('timestamp', 'desc'));
-    onSnapshot(recentPosts, (snapshot) => {
+  const recentPosts = query(postCollection, orderBy('timestamp', 'desc'));
+  let reset = function () {
+    const unsubscribe = onSnapshot(recentPosts, (snapshot) => {
       const data = snapshot.docs.map((doc) => ({
         ...doc.data(),
         id: doc.id,
       }));
       setPosts(data);
+      unsubscribe();
+      setNewPosts(data.length);
+    });
+  };
+
+  useEffect(() => {
+    const recentPosts = query(postCollection, orderBy('timestamp', 'desc'));
+    const unsubscribe = onSnapshot(recentPosts, (snapshot) => {
+      const data = snapshot.docs.map((doc) => ({
+        ...doc.data(),
+        id: doc.id,
+      }));
+      setPosts(data);
+      unsubscribe();
+    });
+    onSnapshot(recentPosts, (snapshot) => {
+      snapshot.docChanges().forEach((change) => {
+        if (change.type === 'added') {
+          setNewPosts((prev) => prev + 0.5);
+        }
+      });
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -55,6 +77,13 @@ export default function Content({ loggedIn }) {
       </div>
       <div className="items">
         {loggedIn ? <NewBuzz /> : null}
+        {posts ? (
+          newPosts - posts.length > 0 ? (
+            <div onClick={reset} className="showMore">
+              Show {newPosts - posts.length} Buzzes
+            </div>
+          ) : null
+        ) : null}
         {posts ? loadPosts() : null}
       </div>
     </div>
