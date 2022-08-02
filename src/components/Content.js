@@ -11,7 +11,8 @@ export default function Content({ loggedIn }) {
   const [newPosts, setNewPosts] = useState(0);
 
   const recentPosts = query(postCollection, orderBy('timestamp', 'desc'));
-  let reset = function () {
+
+  let showMore = function () {
     const unsubscribe = onSnapshot(recentPosts, (snapshot) => {
       const data = snapshot.docs.map((doc) => ({
         ...doc.data(),
@@ -79,7 +80,7 @@ export default function Content({ loggedIn }) {
         {loggedIn ? <NewBuzz /> : null}
         {posts ? (
           newPosts - posts.length > 0 ? (
-            <div onClick={reset} className="showMore">
+            <div onClick={showMore} className="showMore">
               Show {newPosts - posts.length} Buzzes
             </div>
           ) : null
