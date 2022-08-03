@@ -40,8 +40,5 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {
-    "gh-pages": "^4.0.0"
-  },
   "homepage": "http://ihascats.github.io/buzzer"
 }
