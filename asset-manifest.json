@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/buzzer/static/css/main.220a3f1f.css",
+    "main.js": "/buzzer/static/js/main.af7bbbcf.js",
+    "index.html": "/buzzer/index.html",
+    "main.220a3f1f.css.map": "/buzzer/static/css/main.220a3f1f.css.map",
+    "main.af7bbbcf.js.map": "/buzzer/static/js/main.af7bbbcf.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.220a3f1f.css",
+    "static/js/main.af7bbbcf.js"
+  ]
+}
